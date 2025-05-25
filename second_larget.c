@@ -8,7 +8,7 @@ int main()
     int tab[n], tempt[2];
     for(i = 0; i < n; i++)
     {
-        scanf("%d ",&tab[i]);
+        scanf("%d",&tab[i]);
     }
 
     for(i = 0; i < n; i++)
@@ -17,15 +17,17 @@ int main()
         {
             if(tab[i] > tab[j])
             {
-                tempt[0] = tab[i]; tab[i] = tab[j]; tab[j] = tempt[0];
+                tempt[0]=tab[i]; 
+                tab[i]=tab[j]; 
+                tab[j]=tempt[0];
             }
         }
     }
 
     int k=1;
-    if(tab[n-K] == tab[n-K-1])
+    while((tab[n-k] == tab[n-k-1]))
     {
-        k=2;
+        k = k + 1;
 
     }
     printf("Le deuxième plus grand est : %d", tab[n-k-1]);
