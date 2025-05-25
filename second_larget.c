@@ -22,6 +22,12 @@ int main()
         }
     }
 
-    printf("Le deuxième plus grand est : %d", tab[n-2]);
-    return 0;
+    int k=1;
+    if(tab[n-K] == tab[n-K-1])
+    {
+        k=2;
+
+    }
+    printf("Le deuxième plus grand est : %d", tab[n-k-1]);
+    
 }
