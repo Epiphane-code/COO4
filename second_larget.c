@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int main()
+void second()
 {
     int i, j, n;
     scanf("%d", &n);
@@ -30,6 +30,11 @@ int main()
         k = k + 1;
 
     }
-    printf("Le deuxième plus grand est : %d", tab[n-k-1]);
+    printf("Le deuxième plus grand nombre est : %d", tab[n-k-1]);
     
+}
+int main()
+{
+    second();
+    return 0;
 }
