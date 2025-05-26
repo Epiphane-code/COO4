@@ -21,6 +21,7 @@ int main()
         }
     }
     int m = n;
+    int k;
     for (i = 0; i < m; i++)
     {
         for (j = i + 1; j < m; j++)
