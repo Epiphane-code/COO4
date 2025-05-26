@@ -4,13 +4,15 @@
 int main()
 {
     int i, j, n;
+    // Demander à l'utilisateur de saisir la taille du tableau
     scanf("%d", &n);
     int tab[n], tempt[2];
+    // lire les élements du tableau
     for(i = 0; i < n; i++)
     {
         scanf("%d ",&tab[i]);
     }
-
+    // trier les élements du tableau
     for(i = 0; i < n; i++)
     {
         for(j = i + 1; j < n; j++)
@@ -21,7 +23,7 @@ int main()
             }
         }
     }
-
+    // affichage
     printf("Le maximum est : %d", tab[n-1]);
     return 0;
 }

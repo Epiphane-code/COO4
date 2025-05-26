@@ -6,11 +6,12 @@ int main()
     int i, j, n;
     scanf("%d", &n);
     int tab[n], tempt[2];
+    // Lire les éléments du tableau
     for(i = 0; i < n; i++)
     {
         scanf("%d ",&tab[i]);
     }
-
+    // Trier le tableau
     for(i = 0; i < n; i++)
     {
         for(j = i + 1; j < n; j++)
@@ -21,7 +22,7 @@ int main()
             }
         }
     }
-
+    // Afficher le tableau trié
     printf("Tableau trié : ");
     for(i = 0; i < n; i++)
     {
