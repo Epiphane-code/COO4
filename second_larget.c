@@ -9,29 +9,16 @@ int main(){
     for (i = 0; i < n; i++) {
         scanf("%d", &tab[i]);
     }
-    // trier le tableau
-    for (i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (tab[i] > tab[j]) {
-                int temp = tab[i];
-                tab[i] = tab[j];
-                tab[j] = temp;
-            }
-        }
-    }
-    // trouver le deuxieme plus grand nombre
-    max = tab[n - 1];
-    second_max = 1; // initialiser second_max à 0
+    max = tab[n-1];
+    second_max = -2147483648; // Initialiser à la plus petite valeur possible pour un int
     for (i = 0; i < n; i++) {
-        if (tab[i] < max) {
+        if (tab[i] > max) {
+            second_max = max;
+            max = tab[i];
+        } else if (tab[i] > second_max && tab[i] < max) {
             second_max = tab[i];
         }
     }
-    if (second_max == 1) {
-        printf("Il n'y a pas de deuxieme plus grand nombre\n");
-        return 1;
-    }
-    // afficher le resultat
 
     printf("Le deuxi\xc3\xa8me plus grand nombre est : %d\n", second_max);
     return 0;   
