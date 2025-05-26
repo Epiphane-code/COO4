@@ -3,37 +3,28 @@
 #include <string.h>
 int main()
 {
-    int i, j, n;
+    int n, i, j, max, second_max;
     scanf("%d", &n);
-    int tab[n], tempt;
-    for(i = 0; i < n; i++)
-    {
-        scanf("%d",&tab[i]);
+    if (n < 2) {
+        return 1;
     }
-
-    for(i = 0; i < n; i++)
-    {
-        for(j = i + 1; j < n; j++)
-        {
-            if(tab[i] > tab[j])
-            {
-                tempt = tab[i]; tab[i] = tab[j]; tab[j] = tempt;
-            }
+    int tab[n];
+    for (i = 0; i < n; i++) {
+        scanf("%d", &tab[i]);
+    }
+    max = tab[0];
+    second_max = -1; // Initialize to a value less than any possible input
+    for (i = 1; i < n; i++) {
+        if (tab[i] > max) {
+            second_max = max;
+            max = tab[i];
+        } else if (tab[i] > second_max) {
+            second_max = tab[i];
         }
     }
-
-    int max = tab[n-1];
-    int k = n - 2;
-    while(k >= 0 && tab[k] == max)
-    {
-        k--;
-    }
-    if (k >= 0)
-    {
-        int second_max = tab[k];
-        printf("Le deuxième plus grand nombre est : %d\n", second_max);
-        return 0;
-    }
-    return 0; // pas de deuxième plus grand nombre
     
-} 
+    printf("Le deuxième plus grand nombre est : %d\n", second_max);
+    
+
+
+}
