@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int main()
+void second_max()
 {
     int n, i, j, max, second_max;
     scanf("%d", &n);
@@ -29,4 +29,9 @@ int main()
     
 
 
+}
+int main()
+{
+    second_max();
+    return 0;
 }
