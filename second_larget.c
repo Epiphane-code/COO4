@@ -7,26 +7,26 @@ int main(){
     if (n < 2) {
         return 1;
     }
-    int tab[n];
     for (i = 0; i < n; i++) {
-        scanf("%d", &tab[i]);
-    }
-    max = tab[0];
-    for (i = 0; i < n; i++) {
-        if (tab[i] > max) {
-            max = tab[i];
+        scanf("%d", &j);
+        if (i == 0) {
+            max = j;
+            second_max = j;
+        } else {
+            if (j > max) {
+                second_max = max;
+                max = j;
+            } else if (j > second_max && j < max) {
+                second_max = j;
+            }
         }
     }
-    second_max = -1;
-    for (i = 0; i < n; i++) {
-        if (tab[i] > second_max && tab[i] < max) {
-            second_max = tab[i];
-        }
+    if (second_max == max) {
+        printf("le second max = max.\n");
+        return 1;
     }
+    printf("Le deuxième plus grand nombre est : %d\n", second_max);
+    return 0;   
 
-    printf("Le deuxième plus grand nombre est : %d ", second_max);
-
-
-    return 0;
     
 }
