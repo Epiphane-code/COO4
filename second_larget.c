@@ -24,7 +24,7 @@ int main(){
     if (second_max == -2147483648) {
         printf(".\n");
     } else {
-        printf("%d\n", second_max);
+        printf("Le deuxième plus grand nombre est : %d\n", second_max);
     }
     return 0;   
 
