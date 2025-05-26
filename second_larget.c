@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 int main(){
     int n, i, max, second_max, temp;
     scanf("%d", &n);
@@ -35,7 +33,7 @@ int main(){
     }
     // afficher le resultat
 
-    printf("Le deuxieme plus grand nombre est : %d\n", second_max);
+    printf("Le deuxi\xc3\xa8me plus grand nombre est : %d\n", second_max);
     return 0;   
 
     
