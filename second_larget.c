@@ -5,15 +5,14 @@ int main()
 {
     // declaration des variables
     int n, i, j, max, second_max;
-    printf("Entrez le nombre d'elements du tableau: ");
     scanf("%d", &n);
     int tab[n];
     // saisie des elements du tableau
-    printf("Entrez les elements du tableau:\n");
+
     for (i = 0; i < n; i++) {
         scanf("%d", &tab[i]);
     }
-max=0;
+     max=0;
     // recherche du maximum
     for (i = 0; i < n; i++) {
         if (tab[i] > max) {
