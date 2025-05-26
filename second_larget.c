@@ -3,33 +3,37 @@
 #include <string.h>
 int main()
 {
-    // declaration des variables
-    int n, i, j, max, second_max;
+    int i, j, n;
     scanf("%d", &n);
-    int tab[n];
-    // saisie des elements du tableau
+    int tab[n], tempt[2];
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d",&tab[i]);
+    }
 
-    for (i = 0; i < n; i++) {
-        scanf("%d", &tab[i]);
-    }
-     max=0;
-    // recherche du maximum
-    for (i = 0; i < n; i++) {
-        if (tab[i] > max) {
-            max = tab[i];
+    for(i = 0; i < n; i++)
+    {
+        for(j = i + 1; j < n; j++)
+        {
+            if(tab[i] > tab[j])
+            {
+                tempt[0] = tab[i]; tab[i] = tab[j]; tab[j] = tempt[0];
+            }
         }
     }
-    second_max = -1;
-    // recherche du second maximum
-    for (i = 0; i < n; i++) {
-        if (tab[i] > second_max && tab[i] < max) {
-            second_max = tab[i];
-        }
+
+    int max = tab[n-1];
+    int k = n - 2;
+    while(k >= 0 && tab[k] == max)
+    {
+        k--;
     }
-    if (second_max == -1) {
-        printf("Il n'y a pas de second maximum.\n");
-    } else {
+    if (k >= 0)
+    {
+        int second_max = tab[k];
         printf("Le deuxième plus grand nombre est : %d\n", second_max);
+        return 0;
     }
-    return 0;
-}
+    return 0; // pas de deuxième plus grand nombre
+    
+} 
