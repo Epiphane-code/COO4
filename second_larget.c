@@ -20,7 +20,7 @@ int main(){
         }
     }
 
-    printf("Le deuxi\xc3\xa8me plus grand nombre est : %d\n", second_max);
+    printf("Le deuxi\xc3\xa8me plus grand nombre est :%d\n", second_max);
     return 0;   
 
     
