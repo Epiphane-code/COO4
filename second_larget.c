@@ -5,7 +5,7 @@ int main()
 {
     int i, j, n;
     scanf("%d", &n);
-    int tab[n], tempt[2];
+    int tab[n], tempt;
     for(i = 0; i < n; i++)
     {
         scanf("%d",&tab[i]);
@@ -17,7 +17,7 @@ int main()
         {
             if(tab[i] > tab[j])
             {
-                tempt[0] = tab[i]; tab[i] = tab[j]; tab[j] = tempt[0];
+                tempt = tab[i]; tab[i] = tab[j]; tab[j] = tempt;
             }
         }
     }
