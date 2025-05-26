@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void second_max()
-{
+int main(){
     int n, i, j, max, second_max;
     scanf("%d", &n);
     if (n < 2) {
@@ -26,12 +25,8 @@ void second_max()
     }
 
     printf("Le deuxième plus grand nombre est : %d ", second_max);
-    
 
 
-}
-int main()
-{
-    second_max();
     return 0;
+    
 }
