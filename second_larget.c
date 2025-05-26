@@ -31,7 +31,7 @@ int main()
     if (k >= 0)
     {
         int second_max = tab[k];
-        printf("Le deuxième plus grand nombre est: %d\n", second_max);
+        printf("Le deuxième plus grand nombre est : %d\n", second_max);
         return 0;
     }
     return 0; // pas de deuxième plus grand nombre
