@@ -2,7 +2,7 @@
 int main(){
     int n, i;
     scanf("%d",&n);
-    int tab[n];
+    //int tab[n];
     for(int i = 0; i < n; i++){
         scanf("%d", &tab[i]);
     }
