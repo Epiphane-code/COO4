@@ -2,7 +2,7 @@
 int main(){
     int n, i;
     scanf("%d",&n);
-    //int tab[n];
+    int tab[n];
     for(int i = 0; i < n; i++){
         scanf("%d", &tab[i]);
     }
@@ -16,13 +16,27 @@ int main(){
             }
         }
     }
+    int second_largest = tab[n-1];
+    if(n < 2){
+        printf("Il n'y a pas de deuxi\xC3\xa8me plus grand nombre.\n");
+        return 0;
+    }
 
-    for(i < n; i = 0; i--){
+    for(i = 0; i < n; i++){
         if(tab[i] != tab[n-1]){
-            printf("Le deuxi\xC3\xa8me plus grand nombre est : %d\n", tab[i]);
-            break;
+            second_largest = tab[i];
+            while(tab[i] == tab[i+1]){
+                i++;
+            }
+            
         }
     }
+
+    if(tab[i] != tab[n-1]){
+                printf("Le deuxi\xC3\xa8me plus grand nombre est : %d\n", second_largest);
+                break;
+            }
+            
 
     return 0;
 
