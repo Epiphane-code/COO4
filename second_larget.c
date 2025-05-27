@@ -32,10 +32,9 @@ int main(){
         }
     }
 
-    if(tab[i] != tab[n-1]){
-                printf("Le deuxi\xC3\xa8me plus grand nombre est : %d\n", second_largest);
-                break;
-            }
+    if(tab[i] != tab[n-1])
+    printf("Le deuxi\xC3\xa8me plus grand nombre est : %d\n", second_largest);
+            
             
 
     return 0;
