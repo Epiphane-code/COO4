@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limites.h>
 int main(){
-    int i, j, n;
+    int i, n;
     scanf("%d",&n);
     int tab[n];
     int max = INT_MIN;
@@ -17,5 +17,6 @@ int main(){
         }
     }
     printf("Le deuxième plus grand nombre est : %d", second);
+    return 0;
 
 }
