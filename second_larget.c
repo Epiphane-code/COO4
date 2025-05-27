@@ -12,7 +12,7 @@ int main(){
             second = max;
             max = tab[i];
         }
-        if (tab[i] > second && tab[i] != max ){
+        else if (tab[i] > second && tab[i] != max ){
             second = tab[i];
         }
     }
