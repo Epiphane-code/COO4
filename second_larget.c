@@ -15,22 +15,23 @@ int main(){
             }
         }
     }
-    int m = n;
-    for(i = 0; i < n; i++){
-        if(tab[i] == tab[n-1]){
-            m--;
-            for(j = i + 1; j < n; j++){
-                tab[j-1] = tab[j];
-            }
-        }
+    int second_largest = tab[n - 2];
+    int k = n - 2;
+    if (n < 2) {
+        printf("Il n'y a pas assez de nombres pour trouver le deuxième plus grand.\n");
+        return 1;
     }
-
-    int second_largest = tab[m-1];
-
-    printf("Le deuxième plus grand nombre est: %d\n",second_largest);
-            
-            
-
+    while (k >= 0 && tab[k] == tab[n - 1]) {
+        k--;
+    }
+    if (k < 0) {
+        printf("Tous les nombres sont égaux.\n");
+        return 1;
+    }
+    if (k >= 0) {
+        second_largest = tab[k];
+    }
+    printf("Le deuxième plus grand nombre est : %d\n", second_largest);
     return 0;
 
     
