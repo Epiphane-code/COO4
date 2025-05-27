@@ -12,8 +12,8 @@ int main(){
             second = max;
             max = tab[i];
         }
-        if (tab[i] > min && tab[i] != max ){
-            max = tab[i];
+        if (tab[i] > second && tab[i] != max ){
+            second = tab[i];
         }
     }
     printf("Le deuxième plus grand nombre est : %d", second);
