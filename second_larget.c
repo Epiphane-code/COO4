@@ -1,5 +1,4 @@
-#include <stdio.h>
-int main(){
+#include <stdio.h>int main(){
     int i, j, n;
     scanf("%d",&n);
     int tab[n];
@@ -18,14 +17,12 @@ int main(){
     int second_largest = tab[n - 2];
     int k = n - 2;
     if (n < 2) {
-        printf("Il n'y a pas assez de nombres pour trouver le deuxième plus grand.\n");
         return 1;
     }
     while (k >= 0 && tab[k] == tab[n - 1]) {
         k--;
     }
     if (k < 0) {
-        printf("Tous les nombres sont égaux.\n");
         return 1;
     }
     if (k >= 0) {
