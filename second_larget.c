@@ -27,7 +27,7 @@ int main(){
 
     int second_largest = tab[m-1];
 
-    printf("Le deuxi\xC3\xa8me plus grand nombre est : %d\n",second_largest);
+    printf("Le deuxième plus grand nombre est : %d\n",second_largest);
             
             
 
