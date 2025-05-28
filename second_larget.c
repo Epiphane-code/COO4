@@ -17,7 +17,7 @@ int main()
             second = m;
         }
     }
-    printf("Le deuxième plus grand nombre est : %d", second);
+    printf("Le deuxième plus grand nombre est : %d\n", second);
     return 0;
 
 }
