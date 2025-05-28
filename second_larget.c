@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main()
 {
-    int i, n;
-    n = 0;
+    int i;
+    int n = 0;
 
   while (n < 2){
     scanf("%d",&n);
