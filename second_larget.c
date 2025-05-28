@@ -7,7 +7,7 @@ int main()
     int m;
     int max = INT_MIN;
     int second = INT_MIN;
-    for(int i = 0; i < n; i++){
+    for(i = 0; i < n; i++){
         scanf("%d", &m);
         if (m > max){
             second = max;
