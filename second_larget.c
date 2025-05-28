@@ -1,29 +1,37 @@
 #include <stdio.h>
-#include <limits.h>
+#include <limits.h> // Pour INT_MIN
 
-int second_plus_grand(int taille) {
+int secondMax(int tableau[], int taille) {
     if (taille < 2) {
-        return INT_MIN;  // Indique qu'il n'y a pas de second plus grand
+        printf("Erreur : le tableau doit contenir au moins deux éléments.\n");
+        return INT_MIN;
     }
-    int tab[n];
+
     int max = INT_MIN;
     int second = INT_MIN;
 
     for (int i = 0; i < taille; i++) {
-        scanf("%d",&tab[i]);
-        if (tab[i] > max) {
+        if (tableau[i] > max) {
             second = max;
-            max = tab[i];
-        } else if (tab[i] > second && tab[i] < max) {
-            second = tab[i];
+            max = tableau[i];
+        } else if (tableau[i] > second && tableau[i] != max) {
+            second = tableau[i];
         }
     }
 
-    return (second == INT_MIN) ? INT_MIN : second;
+    if (second == INT_MIN) {
+        printf("Pas de second maximum distinct trouvé.\n");
+    }
+
+    return second;
 }
-int main ()
-{
-    int n;
-    int second = second_plus_grand(n);
-    printf("Le deuxième plus grand nombre est : %d", second );
+
+int main() {
+    int t[] = {5, 3, 9, 1, 9, 7};
+    int taille = sizeof(t) / sizeof(t[0]);
+
+    int resultat = secondMax(t, taille);
+    printf("Le second maximum est : %d\n", resultat);
+
+    return 0;
 }
