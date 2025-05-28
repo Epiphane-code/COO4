@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
-int main(){
+int main()
+{
     int i, n;
     scanf("%d",&n);
     int tab[n];
