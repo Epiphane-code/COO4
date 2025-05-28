@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <limits.h>
 int main()
 {
@@ -20,4 +20,4 @@ int main()
     printf("Le deuxième plus grand nombre est : %d\n", second);
     return 0;
 
-}
+}*/
