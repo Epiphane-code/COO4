@@ -25,11 +25,11 @@ int main()
     }
     if (second_max == INT_MIN)
     {
-        return 1; // Indique qu'il n'y a pas de deuxième plus grand nombre v
+        return 1; // Indique qu'il n'y a pas de deuxième plus grand nombre
     }
     else
     {
-        printf("Le deuxième plus grand nombre est : %d", second_max);
+        printf("Le deuxième plus grand nombre est : %d\n", second_max);
     }
     return 0;
 }
