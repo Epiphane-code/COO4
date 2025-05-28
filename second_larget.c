@@ -27,10 +27,13 @@ int secondMax(int tableau[], int taille) {
 }
 
 int main() {
-    int t[] = {5, 3, 9, 1, 9, 7};
-    int taille = sizeof(t) / sizeof(t[0]);
+    int i, taille;
+    scanf("%f",&taille);
+    int tableau[taille];
+    for (i = 0; i < taille; i++)
+        scanf("%d",& tableau[i]);
 
-    int resultat = secondMax(t, taille);
+    int resultat = secondMax(tableau, taille);
     printf("Le deuxième plus grand nombre est : %d\n", resultat);
 
     return 0;
