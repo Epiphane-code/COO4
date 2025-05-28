@@ -31,7 +31,7 @@ int main() {
     int taille = sizeof(t) / sizeof(t[0]);
 
     int resultat = secondMax(t, taille);
-    printf("Le second maximum est : %d\n", resultat);
+    printf("Le deuxième plus grand nombre est : %d\n", resultat);
 
     return 0;
 }
