@@ -2,7 +2,11 @@
 int main()
 {
     int i, n;
+    n = 0;
+
+  while (n < 2){
     scanf("%d",&n);
+  }
     int tab[n];
     scanf("%d",&tab[0]);
     scanf("%d",&tab[1]);
