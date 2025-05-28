@@ -11,7 +11,7 @@ int second_plus_grand(int taille) {
 
     for (int i = 0; i < taille; i++) {
         scanf("%d",&tab[i]);
-%       if (tab[i] > max) {
+        if (tab[i] > max) {
             second = max;
             max = tab[i];
         } else if (tab[i] > second && tab[i] < max) {
