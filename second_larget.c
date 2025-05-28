@@ -29,7 +29,7 @@ int main()
     }
     else
     {
-        printf("Le deuxième plus grand nombre est : %d\n", second_max);
+        printf("Le deuxième plus grand nombre est : %d", second_max);
     }
     return 0;
 }
