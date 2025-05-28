@@ -25,7 +25,7 @@ int main()
     }
     if (second_max == INT_MIN)
     {
-        return 1; // Indique qu'il n'y a pas de deuxième plus grand nombre
+        return 1; // Indique qu'il n'y a pas de deuxième plus grand nombre v
     }
     else
     {
