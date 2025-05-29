@@ -12,16 +12,16 @@ int main()
     }
     for (i = 0; i < n; i++){
         for (j = i + 1; j < n; j++){
-            if ( tab[i] < tab[j]){
+            if ( tab[i] > tab[j]){
                 temp = tab[i]; tab[i] = tab[j]; tab[j] = temp;
             }
         }
     }
 
-    int k = 1;
+    int k = n-2;
 
-    while ( tab[k] == tab[0]){
-        k = k + 1;
+    while ( tab[k] == tab[n-1]){
+        k = k - 1;
     }
 
     printf("Le deuxième plus grand nombre est : %d", tab[k]);
