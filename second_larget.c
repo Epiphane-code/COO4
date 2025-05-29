@@ -5,31 +5,24 @@ int main()
 {
     int i, n, j;
     scanf("%d", &n);
-    int tab[n];
+    int tab[n], temp;
     for (i = 0; i < n; i++)
     {
-        scanf("%d", &tab[i]);
+        scanf("%d",&tab[i]);
     }
-    int max = INT_MIN, second_max = INT_MIN;
-    for (i = 0; i < n; i++)
-    {
-        if (tab[i] > max)
-        {
-            second_max = max;
-            max = tab[i];
-        }
-        else if (tab[i] > second_max && tab[i] < max)
-        {
-            second_max = tab[i];
+    for (i = 0; i < n; i++){
+        for (j = i + 1; j < n; j++){
+            if ( tab[i] < tab[j]){
+                temp = tab[i]; tab[i] = tab[j]; tab[j] = temp;
+            }
         }
     }
-    if (second_max == INT_MIN)
-    {
-        return 1; // Indique qu'il n'y a pas de deuxième plus grand nombre
+
+    int k = 1;
+
+    while ( tab[k] == tab[0]){
+        k = k + 1;
     }
-    else
-    {
-        printf("Le deuxième plus grand nombre est : %d\n", second_max);
-    }
-    return 0;
+
+    printf("Le deuxième plus grand nombre est : %d", tab[k]);
 }
