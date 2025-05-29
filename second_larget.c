@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <limits.h>
 // pour calculer le deuxième plus grand nombre dans un tableau
-int main()
-{
+int second(){
     int i, n, j;
     scanf("%d", &n);
-    int tab[n], temp;
+    int tab[n], temp = 0;
     for (i = 0; i < n; i++)
     {
         scanf("%d",&tab[i]);
@@ -24,5 +23,12 @@ int main()
         k = k - 1;
     }
 
-    printf("Le deuxième plus grand nombre est : %d", tab[k]);
+    return (k < 0)? 0:tab[k];
+}
+
+int main()
+{
+    int seconde = second();
+    printf("Le deuxième plus grand nombre est : %d", seconde);
+    return 0;
 }
