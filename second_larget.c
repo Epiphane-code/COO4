@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 // pour calculer le deuxième plus grand nombre dans un tableau
 int second(){
     int i, n, j, k;
@@ -27,18 +26,12 @@ int second(){
             }
         }
      }
-
-    if (n < 2) {
-        // Si moins de deux éléments distincts, on ne peut pas trouver le deuxième plus grand
-        printf("Il n'y a pas assez de nombres distincts pour trouver le deuxième plus grand.\n");
-        return INT_MIN; // Retourne une valeur spéciale pour indiquer l'erreur
-    }
-    return tab[n - 2]; // Retourne le deuxième plus grand nombre
+    return (n < 2)? 0:tab[n - 2]; // Retourne le deuxième plus grand nombre ou 0 si n < 2
 }
 
 int main()
 {
     int seconde = second();
-    printf("Le deuxième plus grand nombre est : %d", seconde);
+    printf("Le deuxième plus grand nombre est : %d\n", seconde);
     return 0;
 }
